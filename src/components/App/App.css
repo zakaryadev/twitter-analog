@@ -1,0 +1,10 @@
+.App {
+    margin: 50px auto;
+    max-width: 800px;
+    box-shadow: 0 0 20px 20px rgb(224 224 224 / 15%);
+    background-color: #ffffff;
+    padding: 20px 35px;
+    overflow: auto;
+    height: 500px;
+    border-radius: 10px;
+}

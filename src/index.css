@@ -1,0 +1,59 @@
+
+body {
+  background-color: #f1f1f1;
+  /*background-color: #1DA1F2;*/
+}
+
+.btn-outline-primary {
+  color: #1e9bf0;
+  border: 1px solid #1e9bf0;
+}
+
+.btn-outline-primary:hover {
+  background-color: #1e9bf0;
+  border: 1px solid #1e9bf0;
+}
+
+.btn-outline-primary:focus {
+  background-color: #1e9bf0;
+  border: 1px solid #1e9bf0;
+  box-shadow:  #1e9bf0;
+}
+
+.btn-primary {
+  background-color: #1e9bf0 !important;
+  border: none;
+}
+
+.important {
+  color: #ffc500;
+}
+
+.starred .fa-star {
+  color: #ffc500;
+}
+
+
+.starred .btn-star{
+  background-color: #E1E8ED !important;
+}
+
+.liked .fa-heart{
+  color: #e2264d;
+}
+
+.btn-heart {
+  transform: translateX(30px);
+  transition: all .5s ease-in-out;
+  display: block;
+  opacity: 0;
+  cursor: none;
+}
+
+.liked .btn-heart {
+  background-color: #E1E8ED !important;
+  transform: translateX(0px);
+  display: block;
+  opacity: 1;
+  cursor: pointer;
+}
