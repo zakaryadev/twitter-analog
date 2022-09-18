@@ -1,15 +1,31 @@
+import React from "react";
 import "./Search.css";
 
-const Search = () => {
-  return (
-    <>
-      <input
-        type="text"
-        className="form-control search-input"
-        placeholder="Search by posts"
-      />
-    </>
-  );
-};
+export default class Search extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      term: "",
+    };
+    this.onUpdateSearch = this.onUpdateSearch.bind(this);
+  }
 
-export default Search;
+  onUpdateSearch(e) {
+    const term = e.target.value;
+    this.setState({ term });
+    this.props.onUpdateSearch(term);
+  }
+
+  render() {
+    return (
+      <>
+        <input
+          type="text"
+          className="form-control search-input"
+          placeholder="Search by posts"
+          onChange={this.onUpdateSearch}
+        />
+      </>
+    );
+  }
+}

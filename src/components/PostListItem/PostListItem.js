@@ -1,25 +1,24 @@
 import "./PostListItem.css";
 
-export default function PostListItem () {
-  const { label, isDelete, onToggleImportant, onToggleLike } = this.props;
+const PostListItem = ({ label, isDelete, onToggleImportant, onToggleLike, important, like })  => {
   let classNames =
     "app-list-item align-items-center d-flex justify-content-between";
-  if (this.state.important) {
+  if (important) {
     classNames += " important starred";
   }
-  if (this.state.liked) {
+  if (like) {
     classNames += " liked";
   }
   return (
     <div className={classNames}>
-        <span className="app-list-item-label" onDoubleClick={this.isLiked}>
+        <span className="app-list-item-label" onDoubleClick={onToggleLike}>
           {label}
         </span>
       <div className="d-flex justify-content-center align-items-center btn-gr">
         <button
           type="button"
           className="btn-star btn btn-sm btn-primary"
-          onClick={this.onImportant}
+          onClick={onToggleImportant}
         >
           <i className="fa-regular fa-star"></i>
         </button>
@@ -33,7 +32,7 @@ export default function PostListItem () {
         <button
           type="button"
           className="btn btn-sm btn-heart btn-primary"
-          onClick={this.isLiked}
+          onClick={onToggleLike}
         >
           <i className="fa-regular fa-heart"></i>
         </button>
@@ -41,3 +40,5 @@ export default function PostListItem () {
     </div>
   );
 }
+
+export default PostListItem;
