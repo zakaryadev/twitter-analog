@@ -57,3 +57,18 @@ body {
   opacity: 1;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 576px) {
+  #root {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .app-header h2 {
+    font-size: 1rem !important;
+  }
+
+  .App {
+    padding: 10px 25px !important;
+  }
+}
